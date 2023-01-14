@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-53nis$lwp)shaovc!r*@wl5fnp1syr=_8t0&y-qr+1&0bjydf+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -124,5 +124,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
-STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+STATIC_ROOT = os. path. join (BASE_DIR, 'staticfiles')
+                
+STATICFILES_DIRS = [
+    os.path.join (BASE_DIR, "static"),
+ ]
+
+
